@@ -1,4 +1,22 @@
 variable "aws_region" {
+  description = "AWS region"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "project_name" {
+  description = "Project name"
+  type        = string
+  default     = "genorax"
+}
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
+  default     = "dev"
+}
+
+variable "vpc_cidr" {
   description = "VPC CIDR"
   type        = string
   default     = "10.50.0.0/16"
@@ -44,18 +62,6 @@ variable "public_key_path" {
   description = "Local path to public SSH key. Leave empty to skip key pair creation"
   type        = string
   default     = ""
-}
-
-variable "s3_bucket_arns" {
-  description = "Allowed S3 bucket ARNs for Jenkins/Genorax"
-  type        = list(string)
-  default     = []
-}
-
-variable "passrole_arns" {
-  description = "IAM role ARNs Jenkins can pass to ECS tasks"
-  type        = list(string)
-  default     = ["*"]
 }
 
 variable "jenkins_admin_user" {
