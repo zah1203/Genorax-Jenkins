@@ -19,6 +19,11 @@ output "instance_id" {
 }
 
 output "instance_profile_name" {
-  value       = aws_iam_instance_profile.jenkins.name
+  value       = aws_iam_instance_profile.jenkins_instance_profile.name
   description = "Instance profile name"
+}
+
+output "jenkins_role_name" {
+  value       = aws_iam_role.jenkins_role.name
+  description = "Jenkins IAM role name"
 }
