@@ -9,8 +9,8 @@ root_volume_size  = 50
 terraform_version = "1.8.5"
 public_key_path   = "~/.ssh/id_rsa.pub"
 
-allowed_ssh_cidrs     = ["YOUR_PUBLIC_IP/32"]
-allowed_jenkins_cidrs = ["YOUR_PUBLIC_IP/32"]
+allowed_ssh_cidrs     = ["24.189.77.187/32"]
+allowed_jenkins_cidrs = ["24.189.77.187/32"]
 
 extra_tags = {
   Owner = "J"
